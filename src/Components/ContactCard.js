@@ -27,7 +27,9 @@ const ContactCard=(props)=>{
             <Col md="3" >
             
             <Button className="bg-danger my-5" onClick={()=>props.clickHandler(id)}>Delete</Button>
-            
+            <Link to={{ pathname: `/edit/${id}`, state:{contact:props.contacts} }}>
+            <Button className="bg-primary my-5 mx-2" >Edit</Button>
+            </Link>
             </Col>
             </Row>
            
